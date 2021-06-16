@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.arrBar {
+  display: inline-block;
+  margin: 0 2px;
+}
+
+.container {
+  display: grid;
+  background-color: #010101;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.2fr 1.8fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav-bar nav-bar nav-bar"
+    ". array-container ."
+    ". button-container .";
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: nav-bar;
+  background-color: crimson;
+  height: 60px;
+  margin-bottom: 100px;
+  color: white;
+  font-family: "Antonio", sans-serif;
+  font-size: 25px;
+}
+
+.array-container {
+  height: 100%;
+  min-height: 600px;
+  grid-area: array-container;
+  background-color: #010101;
+  justify-content: flex-end;
+}
+
+.button-container {
+  grid-area: button-container;
+}
+
+.left-side {
+  grid-area: left-side;
+}
+
+.right-side {
+  grid-area: right-side;
+}
+
+.btn {
+  background-color: #010101;
+  padding: 12px 28px;
+  border-radius: 4px;
+  color: white;
+  font-family: "Antonio", sans-serif;
+  font-size: 18px;
+  margin: 5px;
+}
+
+.btn.mod-btn {
+  border: 2px solid crimson;
+  background-color: crimson;
+  color: black;
+  transition-duration: 0.4s;
+}
+
+.btn.mod-btn:hover {
+  background-color: black;
+  color: crimson;
+}
+
+.btn.sort-btn {
+  border: 2px solid cyan;
+  color: cyan;
+  transition-duration: 0.4s;
+}
+
+.btn.sort-btn:hover {
+  background-color: cyan;
+  color: black;
+}
+
+.selectLabel {
+  font-family: "Antonio", sans-serif;
+  font-size: 19px;
+  color: crimson;
+  margin-right: 10px;
+}
+
+.select {
+  width: 100px;
+  height: 40px;
+  font-family: "Antonio", sans-serif;
+  font-size: 19px;
+  background-color: black;
+  color: crimson;
+  border: 2px solid crimson;
+  border-radius: 4px;
+}
+
+.opt {
+  padding: 0 30px 0 10px;
+  min-height: 40px;
+  background-color: black;
+  color: crimson;
+  border: 2px solid crimson;
+}
+
+.opt:hover {
+  background-color: crimson;
+  color: black;
+}
